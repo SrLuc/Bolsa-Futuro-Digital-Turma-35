@@ -1,16 +1,23 @@
 # 📚 Repositório de Slides e Materiais da Disciplina
-Este repositório contém os **slides**, **arquivos de apoio** e **materiais complementares** utilizados ao longo da disciplina.
+
+Bem-vindo(a)! Este repositório contém os materiais didáticos organizados por **módulo**, conforme o andamento da disciplina.
+
+Cada módulo está estruturado com os **conteúdos teóricos**, **atividades práticas** e **materiais complementares**.
 
 ---
 
-## 📂 Estrutura do Repositório
-
+## 📁 Estrutura dos Diretórios
+-  `Modulo/`
+- `introducao/` → Conteúdo introdutório com tópicos do módulo correspondente.
+- `aula.pdf` → PDF da aula correspondente ao módulo 1.
 
 ## ✅ Como usar
 
-- Todos os arquivos estão disponíveis para **visualização e download**.
-- Basta clicar sobre o arquivo desejado e, em seguida, selecionar **"Download"**.
-- Os materiais serão atualizados conforme o andamento das aulas.
+- Acesse o diretório do módulo desejado.
+- Leia o conteúdo da pasta `1.introducao`.
+- Consulte o PDF para acompanhar os tópicos vistos em aula.
+
+Os arquivos estão disponíveis para **visualização e download** a qualquer momento.
 
 ---
 
@@ -19,3 +26,5 @@ Este repositório contém os **slides**, **arquivos de apoio** e **materiais com
 Entre em contato pelo **Moodle** ou pelos canais oficiais da disciplina.
 
 ---
+
+📌 *Este repositório será atualizado ao longo do semestre. Fique atento às novidades!*
