@@ -13,8 +13,6 @@ O conteúdo está organizado por módulos para facilitar o seu acompanhamento ao
 
 Este **NÃO** é o canal Oficial de conteúdo do programa, apenas um repositório que uso no dia a dia e pode ser consultado também pelos treinandos.
 
-
-
 ## Estrutura de Pastas
 
 - 📁 `Módulo 1 ou 2 ou 3/`
@@ -26,14 +24,13 @@ Este **NÃO** é o canal Oficial de conteúdo do programa, apenas um repositóri
     - 📄 `style.css`
     - 📄 `script.js`
 
+## Como Utilizar
+
+![Demonstração](./assets/chrome-capture-2025-07-28.gif)
+
 ## Atenção
 
 📌 Este repositório é um trabalho em progresso e será atualizado continuamente ao longo do semestre. 
 Fique atento(a) às novas pastas e arquivos!
 
 **Bons estudos!**
-
-## Autores
-
-- [@srLuc](https://www.github.com/SrLuc)
-
