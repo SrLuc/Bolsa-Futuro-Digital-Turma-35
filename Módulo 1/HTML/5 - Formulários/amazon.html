@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cadastro Amazon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f3f3f3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 15px;
+    }
+
+    form {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 8px;
+      max-width: 450px;
+      width: 100%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #131921; /* Amazon blue-ish */
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 700;
+      font-size: 26px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+      font-weight: 600;
+      color: #111;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      border: 1.8px solid #ddd;
+      border-radius: 5px;
+      font-size: 15px;
+      transition: border-color 0.3s ease;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    input[type="password"]:focus {
+      border-color: #f90; /* Amazon orange */
+      outline: none;
+      box-shadow: 0 0 6px #f90;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px 0;
+      background-color: #f90;
+      color: #111;
+      border: none;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #cc7a00;
+    }
+
+    @media (max-width: 480px) {
+      form {
+        padding: 25px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <form action="/register" method="POST" novalidate>
+    <h2>Crie sua conta Amazon</h2>
+
+    <label for="customerName">Nome completo</label>
+    <input type="text" id="customerName" name="customerName" placeholder="Seu nome completo" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Seu email" required>
+
+    <label for="phone">Número de celular</label>
+    <input type="tel" id="phone" name="phone" placeholder="(00) 00000-0000">
+
+    <label for="password">Senha</label>
+    <input type="password" id="password" name="password" placeholder="Crie uma senha" required>
+
+    <label for="passwordCheck">Repetir senha</label>
+    <input type="password" id="passwordCheck" name="passwordCheck" placeholder="Digite a senha novamente" required>
+
+    <button type="submit">Criar sua conta</button>
+  </form>
+
+</body>
+</html>

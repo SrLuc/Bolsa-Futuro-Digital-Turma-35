@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Atividade 2 - Complete os atributos do formulário</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--
+    Instruções para a Atividade 2 📝:
+
+    Seu desafio é completar os inputs do formulário adicionando os seguintes atributos:
+    
+    1. name - Adicione o atributo 'name' em todos os inputs para que os dados sejam enviados corretamente.
+    2. placeholder - Preencha os placeholders com dicas que ajudem o usuário a saber o que digitar.
+    3. required - Marque como obrigatório (required) os campos essenciais.
+    4. minlength e maxlength - Defina limites mínimos e máximos de caracteres para inputs text e password.
+    6. min, max e step - Para inputs numéricos e data, defina valores mínimos, máximos e passos.
+    7. type - Confirme se o tipo do input está adequado (exemplo: email, number, date, url, password, tel).
+    
+    Para cada campo do formulário, leia os comentários para entender quais atributos você deve adicionar e os valores corretos.
+
+    NÃO É NESCESSÁRIO COOPIAR O CSS, MAS CASO QUERIA FAZER COMO ADICIONAL, FICA A SEU CRITÉRIO.
+
+    Lembre-se que esse passo é fundamental para a validação e experiência do usuário.
+
+    Bons estudos!
+  -->
+
+
+  <!--
+
+    <style>
+
+
+  /* CSS para a Atividade 2 - Estilo limpo e responsivo */
+
+body {
+  font-family: Verdana, sans-serif;
+  margin: 10px;
+  background-color: #ecf0f1; /* cinza claro */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+  color: #34495e; /* cinza azulado */
+}
+
+h1 {
+  color: #2c3e50; /* azul escuro */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  color: #2c3e50;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1.5px solid #95a5a6; /* cinza médio */
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+  border-color: #27ae60; /* verde vibrante */
+  outline: none;
+  box-shadow: 0 0 5px #27ae60;
+}
+
+fieldset {
+  border: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+legend {
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.option-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  user-select: none;
+  color: #2c3e50;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  accent-color: #27ae60;
+  vertical-align: middle;
+}
+
+button {
+  margin-top: 30px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 17px;
+  width: 100%;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1e8449;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  form {
+    padding: 15px;
+  }
+  button {
+    font-size: 18px;
+    padding: 16px 20px;
+  }
+}
+
+  </style>
+
+  -->
+
+
+</head>
+<body>
+
+  <h1>Atividade 2: Complete os atributos do formulário</h1>
+
+  <form action="#" method="POST">
+
+    <!-- Campo de texto para nome completo -->
+    <label for="nome">Nome Completo:</label>
+    <!--
+      Adicione:
+      - name="nome"
+      - placeholder="Digite seu nome completo"
+      - required
+    -->
+    <input type="text" id="nome">
+
+    <!-- Campo email -->
+    <label for="email">E-mail:</label>
+    <!--
+      Adicione:
+      - name="email"
+      - placeholder="exemplo@dominio.com"
+      - required
+      - type já está "email", confirme se está correto
+    -->
+    <input id="email" type="email">
+
+    <!-- Campo senha -->
+    <label for="senha">Senha:</label>
+    <!--
+      Adicione:
+      - name="senha"
+      - placeholder="Crie uma senha segura"
+      - required
+      - minlength="6"
+      - maxlength="20"
+      - type "password"
+    -->
+    <input id="senha" type="password">
+
+    <!-- Campo número (idade) -->
+    <label for="idade">Idade:</label>
+    <!--
+      Adicione:
+      - name="idade"
+      - placeholder="Digite sua idade"
+      - required
+      - type "number"
+      - min="1"
+      - max="120"
+    -->
+    <input id="idade" type="number">
+
+    <!-- Campo telefone -->
+    <label for="telefone">Telefone:</label>
+    <!--
+      Adicione:
+      - name="telefone"
+      - placeholder="(99) 99999-9999"
+      - required
+      - type "tel"
+      - title="Formato: (99) 99999-9999"
+    -->
+    <input id="telefone" type="tel">
+
+    <!-- Campo url -->
+    <label for="site">Site pessoal ou LinkedIn:</label>
+    <!--
+      Adicione:
+      - name="site"
+      - placeholder="https://exemplo.com"
+      - type "url"
+      - não obrigatório (não usar required)
+    -->
+    <input id="site" type="url">
+
+    <!-- Campo data -->
+    <label for="data-nascimento">Data de Nascimento:</label>
+    <!--
+      Adicione:
+      - name="data-nascimento"
+      - required
+      - type "date"
+    -->
+    <input id="data-nascimento" type="date">
+
+    <!-- Grupo de radio buttons para gênero -->
+    <fieldset>
+      <legend>Gênero:</legend>
+      <div class="option-group">
+
+        <!-- Masculino -->
+        <label class="option-item" for="masculino">
+          <!--
+            Adicione:
+            - name="genero"
+            - required (apenas no primeiro para obrigar a escolha)
+            - value="masculino"
+          -->
+          <input type="radio" id="masculino">
+          Masculino
+        </label>
+
+        <!-- Feminino -->
+        <label class="option-item" for="feminino">
+          <!--
+            Adicione:
+            - name="genero"
+            - value="feminino"
+          -->
+          <input value="feminino" name="genero" type="radio" id="feminino">
+          Feminino
+        </label>
+
+        <!-- Prefiro não dizer -->
+        <label class="option-item" for="nao-declarar">
+          <!--
+            Adicione:
+            - name="genero"
+            - value="nao-declarar"
+          -->
+          <input type="radio" id="nao-declarar">
+          Prefiro não dizer
+        </label>
+
+      </div>
+    </fieldset>
+
+    <!-- Checkbox hobbies -->
+    <fieldset>
+      <legend>Quais hobbies você pratica?</legend>
+      <div class="option-group">
+
+        <!-- Leitura -->
+        <label class="option-item" for="leitura">
+          <!--
+            Adicione:
+            - name="hobbies"
+            - value="leitura"
+          -->
+          <input type="checkbox" id="leitura">
+          Leitura
+        </label>
+
+        <!-- Música -->
+        <label class="option-item" for="musica">
+          <!--
+            Adicione:
+            - name="hobbies"
+            - value="musica"
+          -->
+          <input type="checkbox" id="musica">
+          Música
+        </label>
+
+        <!-- Esportes -->
+        <label class="option-item" for="esportes">
+          <!--
+            Adicione:
+            - name="hobbies"
+            - value="esportes"
+          -->
+          <input type="checkbox" id="esportes">
+          Esportes
+        </label>
+
+        <!-- Tecnologia -->
+        <label class="option-item" for="tecnologia">
+          <!--
+            Adicione:
+            - name="hobbies"
+            - value="tecnologia"
+          -->
+          <input type="checkbox" id="tecnologia">
+          Tecnologia
+        </label>
+
+        <!-- Outros -->
+        <label class="option-item" for="outros">
+          <!--
+            Adicione:
+            - name="hobbies"
+            - value="outros"
+          -->
+          <input type="checkbox" id="outros">
+          Outros
+        </label>
+
+      </div>
+    </fieldset>
+
+    <!-- Comentários -->
+    <label for="comentarios">Comentários:</label>
+    <!--
+      Adicione:
+      - name="comentarios"
+      - placeholder="Escreva algo..."
+    -->
+    <textarea id="comentarios" rows="4"></textarea>
+
+    <button type="submit">Enviar</button>
+
+  </form>
+
+</body>
+</html>

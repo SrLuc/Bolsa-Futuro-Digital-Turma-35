@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Consumindo API com Fetch</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      color: #333;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      background-color: #fff;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    button.remove-btn {
+      background-color: #e74c3c;
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.2s ease;
+    }
+    button.remove-btn:hover {
+      background-color: #c0392b;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Lista de Usuários</h1>
+  <ul id="userList"></ul>
+
+  <h2>Criar Usuário</h2>
+  <form id="userForm" onsubmit="event.preventDefault(); handleSubmit();">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name" required />
+    <br />
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required />
+    <br />
+    <button type="submit">Criar Usuário</button>
+  </form>
+
+  <script>
+
+    const PORT = 3000; // Porta do servidor
+
+    async function fetchUsers() {
+      try {
+        const response = await fetch(`http://localhost:${PORT}/api/users`);
+        if (!response.ok) throw new Error("Erro ao buscar usuários");
+        const users = await response.json();
+
+        const ul = document.getElementById("userList");
+        ul.innerHTML = "";
+
+        users.forEach((user) => {
+          const li = document.createElement("li");
+          li.textContent = `${user.name} (${user.email})`;
+
+          const removeBtn = document.createElement("button");
+          removeBtn.textContent = "Remover";
+          removeBtn.className = "remove-btn";
+          removeBtn.onclick = () => deleteUser(user.id);
+
+          li.appendChild(removeBtn);
+          ul.appendChild(li);
+        });
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    async function postUser(user) {
+      try {
+        const response = await fetch(`http://localhost:${PORT}/api/users`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(user),
+        });
+        if (!response.ok) throw new Error("Erro ao criar usuário");
+        await fetchUsers();
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    async function deleteUser(userId) {
+      try {
+        const response = await fetch(`http://localhost:${PORT}/api/users/${userId}`, {
+          method: "DELETE",
+        });
+        if (!response.ok) throw new Error("Erro ao remover usuário");
+        await fetchUsers();
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    function handleSubmit() {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+
+      if (name && email) {
+        postUser({ name, email });
+        document.getElementById("userForm").reset();
+      } else {
+        alert("Por favor, preencha todos os campos.");
+      }
+    }
+
+    fetchUsers();
+  </script>
+
+</body>
+</html>

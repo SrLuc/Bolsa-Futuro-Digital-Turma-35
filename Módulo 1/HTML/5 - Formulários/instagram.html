@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Instagram Sign Up</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #fafafa;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      width: 350px;
+      background-color: white;
+      border: 1px solid #dbdbdb;
+      padding: 20px 40px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    .logo {
+      font-family: 'Billabong', cursive;
+      font-size: 48px;
+      margin: 22px 0;
+    }
+    .subtitle {
+      color: #8e8e8e;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    input {
+      padding: 9px 8px 7px;
+      background-color: #fafafa;
+      border: 1px solid #dbdbdb;
+      border-radius: 3px;
+      font-size: 12px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #0095f6;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 7px 16px;
+      font-weight: 600;
+      margin-top: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      width: 100%;
+    }
+    .terms {
+      color: #8e8e8e;
+      font-size: 12px;
+      margin: 15px 0;
+    }
+
+    /* Responsividade */
+    @media (max-width: 400px) {
+      body {
+        padding: 10px;
+        height: auto;
+        align-items: flex-start;
+      }
+      .container {
+        width: 100%;
+        padding: 20px;
+        border-radius: 6px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      }
+      .logo {
+        font-size: 40px;
+        margin: 16px 0;
+      }
+      .subtitle {
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+      input {
+        font-size: 14px;
+      }
+      button {
+        font-size: 16px;
+        padding: 10px 0;
+      }
+      .terms {
+        font-size: 11px;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="logo">Instagram</h1>
+    <p class="subtitle">Sign up to see photos and videos from your friends.</p>
+    <form class="form-group">
+      <input type="text" placeholder="Mobile Number or Email" required>
+      <input type="text" placeholder="Full Name" required>
+      <input type="text" placeholder="Username" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p class="terms">By signing up, you agree to our Terms, Data Policy and Cookies Policy.</p>
+  </div>
+</body>
+</html>
