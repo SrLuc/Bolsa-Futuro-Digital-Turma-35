@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cadastro Pinterest</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e60023; /* vermelho Pinterest */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    form {
+      background: white;
+      border-radius: 8px;
+      padding: 30px 35px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+      color: #bd081c;
+      text-align: center;
+      margin-bottom: 25px;
+      font-weight: 700;
+      font-size: 28px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #333;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    input[type="number"] {
+      width: 100%;
+      padding: 12px 14px;
+      margin-bottom: 20px;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+    }
+    input[type="email"]:focus,
+    input[type="password"]:focus,
+    input[type="number"]:focus {
+      border-color: #bd081c;
+      outline: none;
+      box-shadow: 0 0 5px #bd081c;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px 0;
+      background-color: #bd081c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #9a0618;
+    }
+
+    @media (max-width: 440px) {
+      form {
+        padding: 20px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <form action="/signup" method="POST" novalidate>
+    <h2>Cadastre-se no Pinterest</h2>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+
+    <label for="password">Senha</label>
+    <input type="password" id="password" name="password" placeholder="Crie uma senha" required>
+
+    <label for="age">Idade</label>
+    <input type="number" id="age" name="age" min="13" placeholder="Sua idade" required>
+
+    <button type="submit">Criar Conta</button>
+  </form>
+
+</body>
+</html>

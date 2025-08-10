@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Explorando Tipos de Inputs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --cor-primaria: #2c3e50;
+      --cor-secundaria: #27ae60;
+      --cor-fundo: #ecf0f1;
+      --cor-texto: #34495e;
+      --cor-borda: #95a5a6;
+      --cor-botao-hover: #1e8449;
+    }
+
+    body {
+      font-family: Verdana, sans-serif;
+      margin: 10px;
+      background-color: var(--cor-fundo);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 10px;
+      color: var(--cor-texto);
+    }
+    h1 {
+      color: var(--cor-primaria);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      box-sizing: border-box;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      user-select: none;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="date"],
+    input[type="color"],
+    input[type="range"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="time"],
+    input[type="search"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1.5px solid var(--cor-borda);
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 15px;
+      font-family: inherit;
+      transition: border-color 0.3s ease;
+      resize: vertical;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="number"]:focus,
+    input[type="date"]:focus,
+    input[type="color"]:focus,
+    input[type="range"]:focus,
+    input[type="tel"]:focus,
+    input[type="url"]:focus,
+    input[type="time"]:focus,
+    input[type="search"]:focus,
+    textarea:focus {
+      border-color: var(--cor-secundaria);
+      outline: none;
+      box-shadow: 0 0 5px var(--cor-secundaria);
+    }
+
+    /* Range slider styling */
+    input[type="range"] {
+      height: 30px;
+      -webkit-appearance: none;
+      background: transparent;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      background: var(--cor-secundaria);
+      cursor: pointer;
+      border-radius: 50%;
+      border: none;
+      margin-top: -7px;
+    }
+    input[type="range"]::-webkit-slider-runnable-track {
+      height: 6px;
+      background: var(--cor-borda);
+      border-radius: 3px;
+    }
+    /* Firefox */
+    input[type="range"]::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      background: var(--cor-secundaria);
+      cursor: pointer;
+      border-radius: 50%;
+      border: none;
+    }
+    input[type="range"]::-moz-range-track {
+      height: 6px;
+      background: var(--cor-borda);
+      border-radius: 3px;
+    }
+
+    fieldset {
+      border: none;
+      margin-top: 20px;
+      padding: 0;
+    }
+    legend {
+      font-weight: 700;
+      color: var(--cor-primaria);
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+    .option-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 6px;
+    }
+    .option-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      user-select: none;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+      cursor: pointer;
+      width: 18px;
+      height: 18px;
+      accent-color: var(--cor-secundaria);
+    }
+    button {
+      margin-top: 30px;
+      background-color: var(--cor-secundaria);
+      color: white;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 17px;
+      width: 100%;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: var(--cor-botao-hover);
+    }
+
+    /* Responsividade */
+    @media (max-width: 480px) {
+      form {
+        padding: 15px;
+      }
+      button {
+        font-size: 18px;
+        padding: 16px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Explorando Tipos de Inputs</h1>
+
+  <form action="#" method="POST">
+
+    <label for="nome">Nome Completo:</label>
+    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" required>
+
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999">
+
+    <label for="site">Site pessoal:</label>
+    <input type="url" id="site" name="site" placeholder="https://meusite.com">
+
+    <label for="idade">Idade:</label>
+    <input type="number" id="idade" name="idade" placeholder="Digite sua idade" min="1" max="120">
+
+    <label for="nascimento">Data de Nascimento:</label>
+    <input type="date" id="nascimento" name="nascimento" required>
+
+    <label for="hora-contato">Hora preferida para contato:</label>
+    <input type="time" id="hora-contato" name="hora-contato">
+
+    <label for="cor-favorita">Cor favorita:</label>
+    <input type="color" id="cor-favorita" name="cor-favorita" value="#27ae60">
+
+    <label for="satisfacao">Nível de satisfação:</label>
+    <input type="range" id="satisfacao" name="satisfacao" min="0" max="10" step="1" value="5">
+
+    <label for="busca">Busca interna:</label>
+    <input type="search" id="busca" name="busca" placeholder="Procure algo...">
+
+    <fieldset>
+      <legend>Gênero:</legend>
+      <div class="option-group">
+        <label class="option-item" for="masculino">
+          <input type="radio" id="masculino" name="genero" value="masculino" required>
+          Masculino
+        </label>
+
+        <label class="option-item" for="feminino">
+          <input type="radio" id="feminino" name="genero" value="feminino">
+          Feminino
+        </label>
+
+        <label class="option-item" for="nao-declarar">
+          <input type="radio" id="nao-declarar" name="genero" value="nao-declarar">
+          Prefiro não dizer
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Quais hobbies você pratica?</legend>
+      <div class="option-group">
+        <label class="option-item" for="leitura">
+          <input type="checkbox" id="leitura" name="hobbies" value="leitura">
+          Leitura
+        </label>
+
+        <label class="option-item" for="musica">
+          <input type="checkbox" id="musica" name="hobbies" value="musica">
+          Música
+        </label>
+
+        <label class="option-item" for="esportes">
+          <input type="checkbox" id="esportes" name="hobbies" value="esportes">
+          Esportes
+        </label>
+
+        <label class="option-item" for="tecnologia">
+          <input type="checkbox" id="tecnologia" name="hobbies" value="tecnologia">
+          Tecnologia
+        </label>
+
+        <label class="option-item" for="outros">
+          <input type="checkbox" id="outros" name="hobbies" value="outros">
+          Outros
+        </label>
+      </div>
+    </fieldset>
+
+    <label for="comentarios">Comentários:</label>
+    <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escreva algo..."></textarea>
+
+    <label class="option-item" for="termos" style="margin-top: 20px; user-select: none;">
+      <input type="checkbox" id="termos" name="termos" required>
+      Aceito os termos de uso
+    </label>
+
+    <button type="submit">Enviar</button>
+
+  </form>
+
+</body>
+</html>

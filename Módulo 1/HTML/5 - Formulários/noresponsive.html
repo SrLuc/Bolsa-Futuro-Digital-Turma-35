@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fixed Width Form</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e6e6e6;
+    }
+    .container {
+      width: 500px;
+      margin: 20px auto;
+      background-color: white;
+      padding: 30px;
+      border: 1px solid #ccc;
+      box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+    }
+    h1 {
+      color: #333;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    td {
+      padding: 8px 0;
+    }
+    .label {
+      font-weight: bold;
+      width: 150px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 300px;
+      padding: 5px;
+      border: 1px solid #999;
+    }
+    select {
+      width: 310px;
+      padding: 5px;
+      border: 1px solid #999;
+    }
+    .submit-btn {
+      background-color: #4a6ea9;
+      color: white;
+      border: none;
+      padding: 8px 25px;
+      cursor: pointer;
+    }
+    .reset-btn {
+      background-color: #999;
+      color: white;
+      border: none;
+      padding: 8px 25px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Registration Form</h1>
+    <form>
+      <table>
+        <tr>
+          <td class="label">Full Name:</td>
+          <td><input type="text" required></td>
+        </tr>
+        <tr>
+          <td class="label">Email:</td>
+          <td><input type="email" required></td>
+        </tr>
+        <tr>
+          <td class="label">Password:</td>
+          <td><input type="password" required></td>
+        </tr>
+        <tr>
+          <td class="label">Gender:</td>
+          <td>
+            <input type="radio" name="gender" id="male" checked>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" style="margin-left: 15px;">
+            <label for="female">Female</label>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Country:</td>
+          <td>
+            <select>
+              <option>Select Country</option>
+              <option>United States</option>
+              <option>Canada</option>
+              <option>United Kingdom</option>
+              <option>Australia</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="label" style="vertical-align: top;">Interests:</td>
+          <td>
+            <div style="margin-bottom: 5px;"><input type="checkbox"> Technology</div>
+            <div style="margin-bottom: 5px;"><input type="checkbox"> Sports</div>
+            <div style="margin-bottom: 5px;"><input type="checkbox"> Music</div>
+            <div><input type="checkbox"> Travel</div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="padding: 15px 0; text-align: center;">
+            <button type="submit" class="submit-btn">Register</button>
+            <button type="reset" class="reset-btn">Reset</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</body>
+</html>

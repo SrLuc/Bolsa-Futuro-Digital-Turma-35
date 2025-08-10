@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pesquisa de Mercado</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f8f9fa;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      background-color: white;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .form-group > div {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #34495e;
+    }
+    select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 15px;
+      box-sizing: border-box;
+    }
+    .options-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .option-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    /* Responsividade simples */
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+      .container {
+        padding: 20px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Pesquisa de Mercado</h1>
+    <form class="form-group" action="#" method="POST">
+
+      <div>
+        <label for="faixa-idade">1. Qual sua faixa etária?</label>
+        <select id="faixa-idade" name="faixa_idade" required>
+          <option value="" disabled selected>Selecione</option>
+          <option value="18-24">18-24 anos</option>
+          <option value="25-34">25-34 anos</option>
+          <option value="35-44">35-44 anos</option>
+          <option value="45-54">45-54 anos</option>
+          <option value="55+">55 anos ou mais</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="faixa-renda">2. Qual sua faixa de renda anual?</label>
+        <select id="faixa-renda" name="faixa_renda" required>
+          <option value="" disabled selected>Selecione</option>
+          <option value="0-25000">R$0 - R$25.000</option>
+          <option value="25001-50000">R$25.001 - R$50.000</option>
+          <option value="50001-100000">R$50.001 - R$100.000</option>
+          <option value="100000+">Mais de R$100.000</option>
+        </select>
+      </div>
+
+      <div>
+        <label>3. Quais produtos você usa regularmente?</label>
+        <div class="options-group">
+          <div class="option-item">
+            <input type="checkbox" id="smartphone" name="produtos" value="smartphone">
+            <label for="smartphone">Smartphone</label>
+          </div>
+          <div class="option-item">
+            <input type="checkbox" id="notebook" name="produtos" value="notebook">
+            <label for="notebook">Notebook</label>
+          </div>
+          <div class="option-item">
+            <input type="checkbox" id="tablet" name="produtos" value="tablet">
+            <label for="tablet">Tablet</label>
+          </div>
+          <div class="option-item">
+            <input type="checkbox" id="smartwatch" name="produtos" value="smartwatch">
+            <label for="smartwatch">Smartwatch</label>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <label>4. Com que frequência você faz compras online?</label>
+        <div class="options-group">
+          <div class="option-item">
+            <input type="radio" name="frequencia_compras" id="diario" value="diario" required>
+            <label for="diario">Diariamente</label>
+          </div>
+          <div class="option-item">
+            <input type="radio" name="frequencia_compras" id="semanal" value="semanal">
+            <label for="semanal">Semanalmente</label>
+          </div>
+          <div class="option-item">
+            <input type="radio" name="frequencia_compras" id="mensal" value="mensal">
+            <label for="mensal">Mensalmente</label>
+          </div>
+          <div class="option-item">
+            <input type="radio" name="frequencia_compras" id="raramente" value="raramente">
+            <label for="raramente">Raramente</label>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <label for="comentarios">5. Algum comentário adicional?</label>
+        <textarea id="comentarios" name="comentarios" placeholder="Seu feedback é importante para nós"></textarea>
+      </div>
+
+      <button type="submit">Enviar Pesquisa</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro no Facebook</title>
+  <style>
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      background-color: #f0f2f5;
+      margin: 10px;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 100%;
+      max-width: 400px;
+      box-sizing: border-box;
+    }
+    h1 {
+      color: #1877f2;
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .name-fields {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .name-fields input {
+      flex: 1 1 45%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #dddfe2;
+      font-size: 15px;
+      box-sizing: border-box;
+    }
+    input[type="text"],
+    input[type="password"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #dddfe2;
+      font-size: 15px;
+      box-sizing: border-box;
+    }
+    .dob-label {
+      font-size: 13px;
+      color: #606770;
+      margin-top: 10px;
+      margin-bottom: 6px;
+    }
+    .dob-selects {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .dob-selects select {
+      flex: 1;
+    }
+    .gender-options {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .gender-label {
+      flex: 1 1 45%;
+      border: 1px solid #dddfe2;
+      border-radius: 4px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      user-select: none;
+    }
+    .gender-label input {
+      margin: 0;
+      cursor: pointer;
+    }
+    button {
+      background-color: #42b72a;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 17px;
+      padding: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #36a420;
+    }
+
+    /* Responsividade */
+    @media (max-width: 480px) {
+      .name-fields {
+        flex-direction: column;
+      }
+      .name-fields input {
+        flex: 1 1 100%;
+      }
+      .gender-label {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Cadastre-se no Facebook</h1>
+    <form action="#" method="POST">
+      <div class="name-fields">
+        <input type="text" id="nome" name="nome" placeholder="Nome" required>
+        <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome" required>
+      </div>
+
+      <input type="text" id="email_telefone" name="email_telefone" placeholder="Número de celular ou e-mail" required>
+
+      <input type="password" id="senha" name="senha" placeholder="Nova senha" required>
+
+      <div class="dob-label">Data de nascimento</div>
+      <div class="dob-selects">
+        <select id="dia" name="dia" required>
+          <option value="" disabled selected>Dia</option>
+          <!-- Dias de 1 a 31 -->
+          <script>
+            for(let i=1; i<=31; i++) {
+              document.write(`<option value="${i}">${i}</option>`);
+            }
+          </script>
+        </select>
+        <select id="mes" name="mes" required>
+          <option value="" disabled selected>Mês</option>
+          <option value="1">Janeiro</option>
+          <option value="2">Fevereiro</option>
+          <option value="3">Março</option>
+          <option value="4">Abril</option>
+          <option value="5">Maio</option>
+          <option value="6">Junho</option>
+          <option value="7">Julho</option>
+          <option value="8">Agosto</o

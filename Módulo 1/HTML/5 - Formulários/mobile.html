@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mobile Sign Up</title>
+  <style>
+    /* Reset básico */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 10px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 400px;
+      background-color: white;
+      border-radius: 12px;
+      padding: 30px 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    input {
+      padding: 14px 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+      outline-offset: 2px;
+    }
+    input:focus {
+      border-color: #4CAF50;
+      outline: 2px solid #a8d5a3;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 14px 0;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+    button:hover,
+    button:focus {
+      background-color: #43a047;
+      outline: none;
+    }
+
+    .login-link {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #666;
+      text-align: center;
+    }
+
+    .login-link a {
+      color: #4CAF50;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .login-link a:hover,
+    .login-link a:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+
+    /* Responsividade */
+    @media (max-width: 420px) {
+      .container {
+        padding: 20px 15px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      input {
+        font-size: 0.95rem;
+        padding: 12px 14px;
+      }
+
+      button {
+        font-size: 1rem;
+        padding: 12px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container" role="main" aria-label="Sign Up Form">
+    <h1>Create Account</h1>
+    <form>
+      <input type="text" name="fullname" placeholder="Full name" aria-label="Full name" required autocomplete="name" />
+      <input type="email" name="email" placeholder="Email address" aria-label="Email address" required autocomplete="email" />
+      <input type="tel" name="phone" placeholder="Phone number" aria-label="Phone number" required autocomplete="tel" />
+      <input type="password" name="password" placeholder="Create password" aria-label="Create password" required autocomplete="new-password" />
+      <button type="submit">Sign Up</button>
+    </form>
+    <div class="login-link">
+      Already have an account? <a href="#" tabindex="0">Log in</a>
+    </div>
+  </main>
+</body>
+</html>

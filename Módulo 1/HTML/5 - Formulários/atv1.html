@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Explorando Tipos de Inputs - Atividade 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!--
+    Atividade 1 - Exploração de Inputs HTML:
+    -----------------------------------------
+    Nesta atividade, você deve:
+    - Associar corretamente os labels aos inputs com os atributos 'for' e 'id'.
+    - Adicionar placeholders úteis para guiar o usuário.
+    - Marcar com 'required' os campos que considerar essenciais para o envio do formulário.
+    - OBS: Por enquanto, não inclua o atributo 'name' nos inputs.
+    
+    Essa prática ajuda a fixar os fundamentos da acessibilidade e usabilidade em formulários.
+
+    NÃO É NESCESSÁRIO COOPIAR O CSS, MAS CASO QUERIA FAZER COMO ADICIONAL, FICA A SEU CRITÉRIO.
+    
+    Nas próximas atividades:
+    - Atividade 2: Vamos trabalhar a adição do atributo 'name' e outros atributos importantes para o funcionamento.
+    - Atividade 3: Você criará um formulário do zero aplicando todo o conhecimento adquirido.
+  -->
+
+
+  <!--
+  
+      <style>
+  
+    :root {
+      --cor-primaria: #2c3e50;
+      --cor-secundaria: #27ae60;
+      --cor-fundo: #ecf0f1;
+      --cor-texto: #34495e;
+      --cor-borda: #95a5a6;
+      --cor-botao-hover: #1e8449;
+    }
+
+    body {
+      font-family: Verdana, sans-serif;
+      margin: 10px;
+      background-color: var(--cor-fundo);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 10px;
+      color: var(--cor-texto);
+    }
+    h1 {
+      color: var(--cor-primaria);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 420px;
+      width: 100%;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      box-sizing: border-box;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      user-select: none;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1.5px solid var(--cor-borda);
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 15px;
+      font-family: inherit;
+      transition: border-color 0.3s ease;
+      resize: vertical;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="number"]:focus,
+    textarea:focus {
+      border-color: var(--cor-secundaria);
+      outline: none;
+      box-shadow: 0 0 5px var(--cor-secundaria);
+    }
+
+    fieldset {
+      border: none;
+      margin-top: 20px;
+      padding: 0;
+    }
+    legend {
+      font-weight: 700;
+      color: var(--cor-primaria);
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+    .option-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 6px;
+    }
+    .option-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      user-select: none;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+      cursor: pointer;
+      width: 18px;
+      height: 18px;
+      accent-color: var(--cor-secundaria);
+    }
+    button {
+      margin-top: 30px;
+      background-color: var(--cor-secundaria);
+      color: white;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 17px;
+      width: 100%;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: var(--cor-botao-hover);
+    }
+
+    @media (max-width: 480px) {
+      form {
+        padding: 15px;
+      }
+      button {
+        font-size: 18px;
+        padding: 16px 20px;
+      }
+    }
+  
+  </style>
+
+
+  -->
+
+
+</head>
+<body>
+
+  <h1>Explorando Tipos de Inputs</h1>
+
+  <form action="#" method="POST">
+
+    <label for="nome">Nome Completo:</label>
+    <input type="text" id="nome" placeholder="Digite seu nome completo" required>
+
+    <br>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" placeholder="exemplo@dominio.com" required>
+
+    <br>
+
+    <label for="idade">Idade:</label>
+    <input type="number" id="idade" placeholder="Digite sua idade" min="1" max="120">
+
+    <fieldset>
+      <legend>Gênero:</legend>
+      <div class="option-group">
+        <label class="option-item" for="masculino">
+          <input type="radio" id="masculino" value="masculino" required>
+          Masculino
+        </label>
+
+        <br>
+
+        <label class="option-item" for="feminino">
+          <input type="radio" id="feminino" value="feminino">
+          Feminino
+        </label>
+
+        <label class="option-item" for="nao-declarar">
+          <input type="radio" id="nao-declarar" value="nao-declarar">
+          Prefiro não dizer
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Quais hobbies você pratica?</legend>
+      <div class="option-group">
+        <label class="option-item" for="leitura">
+          <input type="checkbox" id="leitura" value="leitura">
+          Leitura
+        </label>
+        
+        <label class="option-item" for="musica">
+          <input type="checkbox" id="musica" value="musica">
+          Música
+        </label>
+
+        <label class="option-item" for="esportes">
+          <input type="checkbox" id="esportes" value="esportes">
+          Esportes
+        </label>
+
+        <label class="option-item" for="tecnologia">
+          <input type="checkbox" id="tecnologia" value="tecnologia">
+          Tecnologia
+        </label>
+
+        <label class="option-item" for="outros">
+          <input type="checkbox" id="outros" value="outros">
+          Outros
+        </label>
+      </div>
+    </fieldset>
+
+    <label for="comentarios">Comentários:</label>
+    <br>
+    <textarea id="comentarios" rows="4" placeholder="Escreva algo..."></textarea>
+
+    <button type="submit">Enviar</button>
+
+  </form>
+
+</body>
+</html>
