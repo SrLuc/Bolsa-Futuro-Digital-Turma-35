@@ -32,7 +32,7 @@ app.get("/api/users", (req, res) => {
 });
 
 app.post("/api/users", (req, res) => {
-  const { name, email } = req.body;  // aqui pega os dados do JSON enviado no POST
+  const { name, email } = req.body; // aqui pega os dados do JSON enviado no POST
   conection.query(
     "INSERT INTO users (name, email) VALUES (?, ?)",
     [name, email],
@@ -47,7 +47,7 @@ app.post("/api/users", (req, res) => {
 });
 
 app.delete("/api/users/:id", (req, res) => {
-  const id = req.params.id;  // pega o id da url
+  const id = req.params.id; // pega o id da url
   conection.query("DELETE FROM users WHERE id = ?", [id], (err, results) => {
     if (err) {
       console.error("Erro ao deletar usuário:", err);
@@ -60,3 +60,4 @@ app.delete("/api/users/:id", (req, res) => {
 app.listen(5000, () => {
   console.log("Servidor rodando na porta 5000");
 });
+

@@ -1,6 +1,0 @@
-{
-    "dataworkspace.excludedProjects": [
-        "users/users.sqlproj",
-        "form/form.sqlproj"
-    ]
-}
