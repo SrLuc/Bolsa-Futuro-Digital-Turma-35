@@ -1,0 +1,74 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+/* SOMENTE BORDAS PARA VISUALIZAÇÃO */
+.header, .menu, .item, .banner, .main, .sidebar, 
+.conteudo, .filmes, .filme, .footer {
+  border: 1px dashed #333;
+  padding: 10px;
+}
+
+/* ===============================
+   DESAFIO 1: HEADER
+   - Transforme o header em flex container
+   - Alinhar logo à esquerda e menu à direita
+   - Os itens do menu devem ficar lado a lado
+================================ */
+/* 1- ESCREVER REGRAS CSS AQUI */
+
+/* ===============================
+   DESAFIO 2: BANNER
+   - Centralizar o texto no meio da seção
+   - Horizontal e vertical
+================================ */
+/* 2 - ESCREVER REGRAS CSS AQUI */
+
+
+/* ===============================
+   DESAFIO 3: MAIN
+   - Sidebar deve aparecer à esquerda
+   - Conteúdo (lista de filmes) à direita
+   - Sidebar com largura fixa
+   - Conteúdo ocupando espaço restante
+================================ */
+/* 3 -ESCREVER REGRAS CSS AQUI */
+
+
+/* ===============================
+   DESAFIO 4: FILMES
+   - Transformar .filmes em flex container
+   - Distribuir os filmes em várias colunas
+   - Permitir quebra de linha (wrap)
+   - Espaço uniforme entre filmes
+================================ */
+/* 4 - ESCREVER REGRAS CSS AQUI */
+
+
+/* ===============================
+   DESAFIO 5: FOOTER
+   - Centralizar texto horizontalmente
+   - Opcional: centralizar também verticalmente
+================================ */
+/* 5 - ESCREVER REGRAS CSS AQUI */
+
+
+/* ===============================
+   DESAFIO 6: RESPONSIVIDADE
+   - Em telas menores (<768px):
+     → Menu deve ficar em coluna
+     → Sidebar deve ir abaixo do conteúdo
+     → Filmes devem ficar em 1 coluna
+================================ */
+/* 6 - ESCREVER REGRAS CSS AQUI */
+

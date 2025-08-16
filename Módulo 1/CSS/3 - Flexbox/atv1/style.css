@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== DESAFIO 1 ==========
+Transforme o header em flex container
+Propriedades que você deve usar:
+- display: flex;
+- justify-content: space-between;
+- align-items: center;
+================================= */
+.header {
+  background: #333;
+  color: white;
+  padding: 1rem;
+}
+
+.menu {
+  /* DESAFIO EXTRA:
+     - Coloque os itens do menu lado a lado
+     - Use display: flex
+     - Use gap para dar espaçamento */
+}
+
+.item {
+  padding: 0.5rem 1rem;
+  background: #555;
+  margin: 0.2rem;
+  border-radius: 5px;
+}
+
+/* ========== DESAFIO 2 ==========
+Transforme a área de conteúdo em flex container
+Propriedades que você deve usar:
+- display: flex;
+- justify-content: space-around;
+================================= */
+.conteudo {
+  padding: 2rem;
+}
+
+.card {
+  background: #eee;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}

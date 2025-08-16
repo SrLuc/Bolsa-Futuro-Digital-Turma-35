@@ -1,0 +1,112 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+/* ======================
+   DESAFIO 1: HEADER
+   - Deve ser flex container
+   - Logo à esquerda, menu à direita
+   - Espaço entre elementos
+========================= */
+.header {
+  background: #222;
+  color: white;
+  padding: 1rem;
+}
+
+.menu {
+  /* Itens devem estar em linha */
+}
+
+.item {
+  padding: 0.5rem 1rem;
+  background: #444;
+  margin: 0.2rem;
+  border-radius: 5px;
+}
+
+/* ======================
+   DESAFIO 2: BANNER
+   - Centralizar título e texto
+   - Alinhamento tanto horizontal quanto vertical
+========================= */
+.banner {
+  background: #555;
+  color: white;
+  height: 200px;
+}
+
+/* ======================
+   DESAFIO 3: MAIN
+   - Sidebar e conteúdo lado a lado
+   - Sidebar com largura fixa
+   - Conteúdo ocupando espaço restante
+========================= */
+.main {
+  flex: 1;
+  background: #f4f4f4;
+}
+
+.sidebar {
+  background: #ddd;
+  padding: 1rem;
+}
+
+.conteudo {
+  padding: 1rem;
+}
+
+/* ======================
+   DESAFIO 4: CARDS
+   - Cards devem ocupar várias colunas
+   - Devem quebrar linha quando necessário
+   - Espaço uniforme entre eles
+========================= */
+.cards {
+  margin-top: 1rem;
+}
+
+.card {
+  background: #ccc;
+  padding: 2rem;
+  margin: 0.5rem;
+  border-radius: 5px;
+}
+
+/* ======================
+   DESAFIO 5: SERVIÇOS
+   - 3 caixas lado a lado
+   - Espaçadas igualmente
+========================= */
+.servicos {
+  background: #eee;
+  padding: 2rem;
+}
+
+.servico {
+  background: #bbb;
+  padding: 2rem;
+  margin: 0.5rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* ======================
+   DESAFIO 6: FOOTER
+   - Centralizar conteúdo no meio
+========================= */
+.footer {
+  background: #222;
+  color: white;
+  padding: 1rem;
+}
