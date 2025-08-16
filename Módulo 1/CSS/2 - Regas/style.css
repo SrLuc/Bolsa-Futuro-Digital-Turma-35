@@ -1,0 +1,156 @@
+/* Header: Defina cor de fundo, padding interno e alinhe o conteúdo horizontalmente */
+.header {
+    background-color: aliceblue;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Logo: Defina cor do texto, destaque da palavra "Site" e tamanho da fonte */
+.logo {
+    
+}
+
+/* Menu de navegação: Organize os itens em linha (horizontal) e espaçamento entre eles */
+.menu-nav {
+    display: flex;
+}
+
+/* Item do menu: Cor do texto, dicionar hover com mudança de cor */
+.menu-item a {
+    
+}
+
+/* Banner: Cor de fundo ou imagem, centralizar texto, padding interno */
+.banner {
+    
+}
+
+/* Título do banner: Cor do texto, tamanho da fonte, peso da fonte */
+.titulo-banner {
+    
+}
+
+/* Subtítulo do banner: Cor do subtítulo, tamanho da fonte, margem inferior */
+.subtitulo-banner {
+    
+}
+
+/* Botão do banner: Cor de fundo, cor do texto, padding, borda arredondada, hover */
+.btn-banner {
+    
+}
+
+/* Seção Sobre: Cor de fundo da seção, padding interno, centralização do texto */
+.sobre {
+    
+}
+
+/* Título da seção: Tamanho da fonte, cor e margem inferior */
+.titulo-secao {
+    
+}
+
+/* Texto da seção Sobre: Tamanho da fonte, cor, line-height e alinhamento */
+.texto-sobre {
+    
+}
+
+/* Seção Serviços: Cor de fundo, padding, centralização */
+.servicos {
+    
+}
+
+/* Cards: Layout flex, gap entre os cards, alinhamento */
+.cards {
+    
+}
+
+/* Card: Cor de fundo, padding interno, borda arredondada, sombra */
+.card {
+    
+}
+
+/* Card específico (cores diferentes para cada card) */
+.card-1 {
+    
+}
+.card-2 {
+    
+}
+.card-3 {
+    
+}
+.card-4 {
+    
+}
+
+/* Galeria: Cor de fundo, padding interno, centralização do título */
+.galeria {
+    
+}
+
+/* Grid da galeria: Layout grid, colunas automáticas, gap entre imagens */
+.grid-galeria {
+    
+}
+
+/* Imagem da galeria: Largura 100%, bordas arredondadas */
+.imagem-galeria {
+    
+}
+
+/* Depoimentos: Cor de fundo, padding, centralização do conteúdo */
+.depoimentos {
+    
+}
+
+/* Cards de depoimentos: Layout flex ou grid, gap entre depoimentos */
+.cards-depoimentos {
+    
+}
+
+/* Depoimento individual: Cor de fundo, padding, borda arredondada, sombra */
+.depoimento {
+    
+}
+
+/* Texto do depoimento: Tamanho da fonte, cor e espaçamento inferior */
+.texto-depoimento {
+    
+}
+
+/* Autor do depoimento: Cor do texto, itálico, tamanho da fonte menor */
+.autor-depoimento {
+    
+}
+
+/* Contato: Cor de fundo, padding interno, centralização */
+.contato {
+    
+}
+
+/* Formulário de contato: Layout em coluna, gap entre inputs, largura máxima */
+.form-contato {
+    
+}
+
+/* Inputs e textarea: Padding interno, borda, borda arredondada */
+.input-contato, .textarea-contato {
+    
+}
+
+/* Botão do formulário: Cor de fundo, cor do texto, padding, borda arredondada, hover */
+.btn-contato {
+    
+}
+
+/* Footer: Cor de fundo, padding, centralização do texto */
+.footer {
+    
+}
+
+/* Texto do footer: Cor do texto e tamanho da fonte */
+.texto-footer {
+    
+}

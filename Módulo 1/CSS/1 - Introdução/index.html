@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício Completo de CSS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Cabeçalho -->
+    <header class="site-header">
+      <div class="logo">Meu <span>Site</span></div>
+      <nav>
+        <ul class="menu">
+          <li><a href="#">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+      <h1>Bem-vindo ao Meu Site</h1>
+      <p>
+        Aprenda HTML e CSS praticando na unha, escrevendo primeiro no papel.
+      </p>
+        <br>
+      <a href="#sobre" class="btn">Saiba Mais</a>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="sobre">
+      <h2>Sobre Nós</h2>
+      <p>
+        Somos uma equipe dedicada a ensinar programação de forma prática e
+        divertida. Nesta atividade, você vai escrever regras CSS no caderno e
+        depois digitar no VSCode.
+      </p>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="servicos">
+      <h2>Nossos Serviços</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Desenvolvimento Web</h3>
+          <p>Criação de sites modernos e responsivos.</p>
+        </div>
+        <div class="card destaque">
+          <h3>Design UI/UX</h3>
+          <p>Interfaces bonitas e fáceis de usar.</p>
+        </div>
+        <div class="card">
+          <h3>Consultoria</h3>
+          <p>Orientação para projetos digitais.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeria -->
+    <section class="galeria">
+      <h2>Galeria</h2>
+      <div class="grid-galeria">
+        <img
+          src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+          alt="Imagem 1"
+        />
+        <img
+          src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+          alt="Imagem 2"
+        />
+        <img
+          src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+          alt="Imagem 3"
+        />
+        <img
+          src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+          alt="Imagem 4"
+        />
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="contato">
+      <h2>Fale Conosco</h2>
+      <form>
+        <input type="text" placeholder="Seu nome" />
+        <input type="email" placeholder="Seu email" />
+        <textarea placeholder="Sua mensagem"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="site-footer">
+      <p>&copy; 2025 - Meu Site. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>

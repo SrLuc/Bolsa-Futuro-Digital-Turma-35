@@ -1,0 +1,167 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Cabeçalho */
+.site-header {
+  background: #222;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.site-header .logo span {
+  color: #ff9800;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  color: #ff9800;
+}
+
+/* Banner */
+.banner {
+  background: url("https://www.psaproducts.com.au/wp-content/uploads/2016/08/Hero-Banner-Placeholder-Light-2500x1172-1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.banner .btn {
+  background: #ff9800;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.banner .btn:hover {
+  background: #e68a00;
+}
+
+/* Seção Sobre */
+.sobre {
+  padding: 2rem;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+/* Serviços */
+.servicos {
+  padding: 2rem;
+}
+
+.cards {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  flex: 1;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.destaque {
+  background: #ff9800;
+  color: white;
+}
+
+/* Galeria */
+.galeria {
+  padding: 2rem;
+  background: #fafafa;
+}
+
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.grid-galeria img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Contato */
+.contato {
+  padding: 2rem;
+  background: #f4f4f4;
+}
+
+.contato form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+.contato input,
+.contato textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contato button {
+  padding: 0.75rem;
+  background: #222;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.contato button:hover {
+  background: #444;
+}
+
+/* Rodapé */
+.site-footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* https://grabient.com/HQJgnArANKk+1gGYIBYZKQdg0kMA2ARiJggA5yywCpVgwskojhyQqlgtig?style=linearGradient&steps=7&angle=90 */
+
