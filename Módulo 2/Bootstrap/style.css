@@ -1,0 +1,134 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Carousel fullscreen */
+.carousel-inner img {
+  width: 100%;
+  height: 100vh; /* altura da viewport */
+  object-fit: cover;
+}
+
+/* Cards section */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.cards .card {
+  flex: 1 1 250px; /* flexível com tamanho mínimo de 250px */
+  max-width: 300px;
+}
+
+/* Mountains section */
+.mountains {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.mountains .text {
+  flex: 1 1 300px;
+}
+
+.mountains .mountain-title {
+  font-size: 36px;
+  color: #333;
+}
+
+.mountains .mountain-description {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #666;
+}
+
+.mountains .image {
+  flex: 1 1 300px;
+}
+
+.mountains .mountain-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* Placeholders section */
+.placeholders {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.placeholders .card {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .mountains {
+    flex-direction: column;
+  }
+
+  .mountains .mountain-title {
+    font-size: 28px;
+  }
+
+  .mountains .mountain-description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards .card,
+  .placeholders .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+
+.footer-content{
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+
+}
+
+.social-media-links{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-media-links li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
