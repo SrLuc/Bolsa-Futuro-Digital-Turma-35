@@ -24,10 +24,6 @@ Este **NÃO** é o canal Oficial de conteúdo do programa, apenas um repositóri
     - 📄 `style.css`
     - 📄 `script.js`
 
-## Como Utilizar
-
-![Demonstração](./assets/chrome-capture-2025-07-28.gif)
-
 ## Atenção
 
 📌 Este repositório é um trabalho em progresso e será atualizado continuamente ao longo do semestre. 
