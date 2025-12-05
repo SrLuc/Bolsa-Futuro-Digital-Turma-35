@@ -1,23 +1,17 @@
 import React from "react";
-import { useApi } from "./useApi";
-
-// Interface dos dados da API
-interface Usuario {
-  id: number;
-  name: string;
-}
+import useApi from "./useApi";
 
 function Usuarios() {
-  const { data, loading, erro } = useApi<Usuario[]>(
+  const { data: usuarios, loading, erro } = useApi(
     "https://jsonplaceholder.typicode.com/users"
   );
 
   if (loading) return <p>Carregando...</p>;
-  if (erro) return <p>Erro: {erro}</p>;
+  if (erro) return <p>Erro ao carregar usuários</p>;
 
   return (
     <ul>
-      {data?.map((u) => (
+      {usuarios.map((u) => (
         <li key={u.id}>{u.name}</li>
       ))}
     </ul>
