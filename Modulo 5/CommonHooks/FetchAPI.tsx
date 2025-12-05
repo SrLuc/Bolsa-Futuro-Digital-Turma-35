@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
 
+interface iUsuario {
+  id: number
+  name: string
+}
+
 function ListaUsuarios() {
-  const [usuarios, setUsuarios] = useState([]);
+  const [usuarios, setUsuarios] = useState<iUsuario[]>([]);
   const [carregando, setCarregando] = useState(true);
 
   useEffect(() => {
