@@ -1,0 +1,57 @@
+/* Fonte estilizada */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap');
+
+.card {
+    width: 260px;
+    background: #0d0f1a;
+    padding: 18px;
+    margin: 16px;
+    border-radius: 14px;
+    text-align: center;
+    cursor: pointer;
+
+    border: 2px solid #39ff14;
+    /* Verde neon */
+    box-shadow: 0 0 12px #39ff14aa,
+        0 0 25px #39ff1480;
+
+    transition: transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    border-color: #00e5ff;
+    box-shadow:
+        0 0 15px #00e5ffcc,
+        0 0 30px #00e5ff99,
+        0 0 60px #00e5ff55;
+}
+
+.card h1 {
+    font-family: 'Kanit', sans-serif;
+    color: #39ff14;
+    font-size: 1.3rem;
+    text-shadow: 0 0 8px #39ff1488;
+    margin-bottom: 14px;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 12px #00e5ff55,
+        0 0 25px #00e5ff33;
+
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover img {
+    box-shadow:
+        0 0 20px #39ff1477,
+        0 0 35px #39ff1444;
+}
