@@ -1,0 +1,16 @@
+{
+  "professors": [
+    {
+      "id": "1",
+      "name": "Dr. João Pereira",
+      "email": "professor@escola.com",
+      "password": "123"
+    }
+  ],
+  "students": [
+    {
+      "id": "1",
+      "name": "Ana Silva"
+    }
+  ]
+}

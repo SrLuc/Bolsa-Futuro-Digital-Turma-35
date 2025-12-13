@@ -1,0 +1,20 @@
+.navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #ffffff;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+}
+
+.navbar a {
+  color: #555;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar a.active {
+  color: #007bff;
+}

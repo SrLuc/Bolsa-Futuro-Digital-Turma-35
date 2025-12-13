@@ -1,0 +1,303 @@
+/* Home.css - Versão Simplificada Tema Google */
+
+:root {
+  --primary-color: #1a73e8;
+  --primary-light: #e8f0fe;
+  --gray-50: #f8f9fa;
+  --gray-100: #f1f3f4;
+  --gray-200: #e8eaed;
+  --gray-300: #dadce0;
+  --gray-700: #5f6368;
+  --gray-900: #202124;
+  --white: #ffffff;
+  --shadow-sm: 0 1px 2px 0 rgba(60, 64, 67, 0.1);
+  --shadow-md: 0 1px 3px 0 rgba(60, 64, 67, 0.3);
+  --shadow-lg: 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  --border-radius: 8px;
+  --transition: all 0.2s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+  color: var(--gray-900);
+  background-color: var(--gray-50);
+  line-height: 1.5;
+}
+
+/* Container Principal */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.home-header {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  padding: 1rem 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.school-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--gray-900);
+  margin-bottom: 0.25rem;
+}
+
+.school-subtitle {
+  font-size: 0.875rem;
+  color: var(--gray-700);
+}
+
+/* Main Content */
+.home-main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Welcome Section */
+.welcome-section {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+}
+
+.welcome-section h2 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--gray-900);
+  margin-bottom: 0.5rem;
+}
+
+.welcome-section p {
+  color: var(--gray-700);
+  font-size: 1rem;
+}
+
+/* Login Options */
+.login-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.role-card {
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.role-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--gray-300);
+  transform: translateY(-1px);
+}
+
+.role-content {
+  flex: 1;
+  margin-bottom: 1.5rem;
+}
+
+.role-card h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--gray-900);
+  margin-bottom: 0.5rem;
+}
+
+.role-card p {
+  font-size: 0.875rem;
+  color: var(--gray-700);
+  line-height: 1.4;
+}
+
+.access-button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  padding: 0.625rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  align-self: flex-start;
+}
+
+.access-button:hover {
+  background-color: #0d62d9;
+  box-shadow: 0 1px 2px rgba(26, 115, 232, 0.3);
+}
+
+/* Help Section */
+.help-section {
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid var(--gray-200);
+  margin-top: 2rem;
+}
+
+.help-section p {
+  color: var(--gray-700);
+  font-size: 0.875rem;
+}
+
+.help-section a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.help-section a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.home-footer {
+  background-color: var(--white);
+  border-top: 1px solid var(--gray-200);
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.home-footer p {
+  font-size: 0.75rem;
+  color: var(--gray-700);
+}
+
+/* Responsive Design */
+
+/* Tablets (600px+) */
+@media (min-width: 600px) {
+  .home-header {
+    padding: 1.5rem 2rem;
+  }
+  
+  .school-title {
+    font-size: 1.75rem;
+  }
+  
+  .school-subtitle {
+    font-size: 1rem;
+  }
+  
+  .home-main {
+    padding: 3rem;
+  }
+  
+  .login-options {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .welcome-section h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Desktop (900px+) */
+@media (min-width: 900px) {
+  .home-header {
+    padding: 2rem;
+  }
+  
+  .home-main {
+    padding: 4rem 2rem;
+  }
+  
+  .login-options {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  .role-card {
+    padding: 2rem;
+  }
+  
+  .welcome-section {
+    margin-bottom: 3rem;
+  }
+  
+  .welcome-section h2 {
+    font-size: 2.25rem;
+  }
+}
+
+/* Large Desktop (1200px+) */
+@media (min-width: 1200px) {
+  .home-main {
+    padding: 4rem;
+  }
+  
+  .login-options {
+    gap: 2.5rem;
+  }
+}
+
+/* Mobile (até 480px) */
+@media (max-width: 480px) {
+  .home-header {
+    padding: 1rem;
+  }
+  
+  .home-main {
+    padding: 1.5rem;
+  }
+  
+  .welcome-section {
+    padding: 1rem 0;
+  }
+  
+  .welcome-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .role-card {
+    padding: 1.25rem;
+  }
+  
+  .access-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Acessibilidade - Foco visível */
+.access-button:focus,
+.role-card:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Estados ativos */
+.access-button:active {
+  transform: scale(0.98);
+}
+
+.role-card:active {
+  transform: translateY(0);
+}
