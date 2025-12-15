@@ -1,0 +1,174 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f8;
+}
+
+
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+h1 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+h2 {
+  color: #444;
+  margin: 20px 0 15px 0;
+  font-size: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Seções */
+.search-section,
+.attendance-section,
+.students-section {
+  margin-bottom: 25px;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+/* Botões */
+button {
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.attendance-button {
+  width: 100%;
+  background: #007bff;
+  font-size: 16px;
+  padding: 12px;
+}
+
+.action-btn {
+  background: #6c757d;
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+/* Lista de alunos */
+.students-list {
+  list-style-type: none;
+  margin-top: 10px;
+}
+
+.student-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  border-left: 4px solid #007bff;
+  transition: background-color 0.2s;
+}
+
+.student-item:hover {
+  background-color: #f0f7ff;
+}
+
+.student-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.student-id {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.student-name {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Textos auxiliares */
+.hint {
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+  line-height: 1.4;
+}
+
+.no-results {
+  text-align: center;
+  color: #888;
+  padding: 20px;
+  font-style: italic;
+}
+
+.summary {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px dashed #ddd;
+}
+
+.summary .hint {
+  margin-bottom: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+  
+  .card {
+    padding: 15px;
+    margin: 20px auto;
+  }
+  
+  .student-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .student-actions {
+    margin-top: 10px;
+    align-self: flex-end;
+  }
+}

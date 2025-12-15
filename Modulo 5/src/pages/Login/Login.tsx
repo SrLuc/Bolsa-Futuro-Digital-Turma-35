@@ -30,15 +30,12 @@ const Login: React.FC = () => {
       /**
        * POST real (json-server valida)
        */
-      const response = await axios.get(
-        `${API_URL}/professors`,
-        {
-          params: {
-            email: email,
-            password: senha,
-          },
-        }
-      );
+      const response = await axios.get(`${API_URL}/professors`, {
+        params: {
+          email: email,
+          password: senha,
+        },
+      });
 
       // Verifica se encontrou professor com as credenciais fornecidas
       if (response.data.length === 0) {
@@ -58,6 +55,10 @@ const Login: React.FC = () => {
   const loginVisitante = () => {
     navigate("/");
   };
+
+  const navegarParaProfessor = () => {
+    navigate("/teacher");
+  }
 
   return (
     <div className="login-container">
@@ -90,21 +91,16 @@ const Login: React.FC = () => {
           {erro && <div className="mensagem-erro">{erro}</div>}
 
           <div className="botoes-login">
-            <button
-              onClick={fazerLogin}
-              disabled={carregando}
-              className="botao-login"
-            >
-              {carregando ? "Entrando..." : "Entrar"}
+            <button onClick={fazerLogin} disabled={carregando}>
+              {carregando ? "Carregando..." : "Entrar"}
             </button>
-
-            <button
-              onClick={loginVisitante}
-              disabled={carregando}
-              className="botao-voltar"
-            >
+            <button onClick={navegarParaProfessor} disabled={carregando}>
+              Entrar Professor visitante
+            </button>
+            <button onClick={loginVisitante} disabled={carregando}>
               Voltar para Home
             </button>
+
           </div>
         </div>
       </div>
